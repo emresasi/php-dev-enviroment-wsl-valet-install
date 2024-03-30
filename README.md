@@ -16,7 +16,6 @@ Windows PC'niz yeniden başlatıldıktan sonra gidin ve Windows Mağazanızda ar
 - Sudo visudo'yu çalıştırın
 - Git ve ALL ALL = (root) NOPASSWD dosyasının sonuna şunu ayarla: /usr/sbin/service ve
   <kullanıcı adınız> ALL=(ALL) NOPASSWD: ALL ve kaydedin. Bu, her sudo komutunu kullandığınızda sudo şifrenizi vermenize gerek kalmamasını sağlayacaktır.
-# Türkçe:
 
 Bu script WSL üzerinde bir geliştirme ortamı kurmak için tasarlanmıştır.
 
@@ -46,6 +45,7 @@ RabbitMQ'ya bağlanmak için rabbitmqctl status komutunu kullanın.
 
 
 Scripti çalıştırmadan önce lütfen README dosyasını dikkatlice okuyun.
+# English:
 
 # Installing WSL
 - Go and press Win + R and execute: Control, this will open the old known Panel Control.
@@ -59,9 +59,6 @@ After your Windows PC has been restarted, go and search in your Windows Store:
 - Run sudo visudo
 - Go and set at the end of the file ALL ALL = (root) NOPASSWD: /usr/sbin/service and 
 <your_username> ALL=(ALL) NOPASSWD: ALL and save. This will make you don't have to give your sudo password every time you use a sudo command.
-
-
-# English:
 
 This script is designed to set up a development environment on WSL.
 
