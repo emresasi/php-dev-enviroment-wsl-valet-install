@@ -16,9 +16,9 @@ sudo apt-get update
 sudo apt-get install network-manager libnss3-tools jq xsel
 sudo apt install curl git zip unzip redis-server mysql-server nginx -y
 
-sudo apt install php8.1-{cli,common,curl,fpm,gd,mbstring,mysql,opcache,readline,sqlite3,xml,zip,redis,intl}
-sudo apt install php8.2-{cli,common,curl,fpm,gd,mbstring,mysql,opcache,readline,sqlite3,xml,zip,redis,intl}
-sudo apt install php8.3-{cli,common,curl,fpm,gd,mbstring,mysql,opcache,readline,sqlite3,xml,zip,redis,intl}
+sudo apt install php8.1-{cli,common,curl,fpm,gd,mbstring,mysql,opcache,readline,sqlite3,xml,zip,redis,intl,bcmath}
+sudo apt install php8.2-{cli,common,curl,fpm,gd,mbstring,mysql,opcache,readline,sqlite3,xml,zip,redis,intl,bcmath}
+sudo apt install php8.3-{cli,common,curl,fpm,gd,mbstring,mysql,opcache,readline,sqlite3,xml,zip,redis,intl,bcmath}
 
 
 echo "-------------------------------------------- Composer kurulumu --------------------------------------------"
