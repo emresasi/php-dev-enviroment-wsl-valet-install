@@ -1,4 +1,5 @@
 Setup PHP Development Environment with Laravel Valet and WSL 2 (Works with Ubuntu 22.04)
+Bu script WSL üzerinde bir geliştirme ortamı kurmak için tasarlanmıştır.
 
 # WSL Kurulumu
 Win + R tuşlarına basın ve control yazıp enter diyin. Açılan pencereden programlar ve özellikleri seçin
@@ -17,7 +18,25 @@ Windows PC'niz yeniden başlatıldıktan sonra gidin ve Windows Mağazanızda ar
 - Git ve ALL ALL = (root) NOPASSWD dosyasının sonuna şunu ayarla: /usr/sbin/service ve
   <kullanıcı adınız> ALL=(ALL) NOPASSWD: ALL ve kaydedin. Bu, her sudo komutunu kullandığınızda sudo şifrenizi vermenize gerek kalmamasını sağlayacaktır.
 
-Bu script WSL üzerinde bir geliştirme ortamı kurmak için tasarlanmıştır.
+1.- Bundan sonra Windows tarafında yeni bir uygulama kurmamız gerekiyor,
+Acrylic DNS Proxy'den bahsediyorum. Bu uygulamanın yaptığı şey, bu localhost'un 
+Windows tarafınızda çalışmasını sağlamak için Windows ile Laravel Valet arasında bir 
+proxy iletişimi kurmaktır. İndirin ve yükleyin.
+- [Acrylic DNS Download](https://mayakron.altervista.org/support/acrylic/Home.htm)
+
+2.- Kurulduktan sonra açın, bu yerel DNS hizmetinin arka planda çalışmaya başlamasını 
+sağlayacaktır. Ve 127.0.0.1 DNS’ye işaret eden .test domainini kurmamız gerekiyor.
+
+Dosyaya Git > Acrylic Sunucuyu Aç
+
+Ve dosya kümesinin sonunda: 127.0.0.1 *.test ardından Ctrl + S ile kaydedin. 
+DNS hizmetini yeniden başlatmak için Evet tuşuna basın.
+
+3.- Bir sonraki adımda DNS'yi bilgisayarımızdaki ana İnternet bağlantı noktamıza ayarlamamız 
+gerekiyor, bunun için bu aşağıdaki Windows Configuration linkini kontrol edin.
+
+- [Windows Configuration](https://mayakron.altervista.org/support/acrylic/Windows10Configuration.htm)
+
 
 # Kurulum sırasında yapılacaklar:
 
@@ -58,10 +77,31 @@ After your Windows PC has been restarted, go and search in your Windows Store:
 
 - Run sudo visudo
 - Go and set at the end of the file ALL ALL = (root) NOPASSWD: /usr/sbin/service and 
-<your_username> ALL=(ALL) NOPASSWD: ALL and save. This will make you don't have to give your sudo password every time you use a sudo command.
+<your_username> ALL=(ALL) NOPASSWD: ALL and save. This will make you don't have to give 
+your sudo password every time you use a sudo command.
 
 This script is designed to set up a development environment on WSL.
 
+1.- After that, we need to install a new app in the Windows side, i'm talking about 
+Acrylic DNS Proxy. What this app does is to establish a proxy communication between 
+Windows and Laravel Valet to make this localhost works in your Windows side. 
+Download it and install it.
+- [Acrylic DNS Download](https://mayakron.altervista.org/support/acrylic/Home.htm)
+
+2.- Once is installed just open it, this will make the local DNS service start running in the 
+backgroud. And we need to set up the domain .test pointed into 127.0.0.1 DNS.
+
+Go to File > Open Acrylic Host
+
+And at the end of the file set: 127.0.0.1 *.test then save it with Ctrl + S. 
+Press Yes to restart the DNS service.
+
+3.- The next installation is to set DNS to our main Internet port on our computer
+required, for that check the Windows Configuration link below.
+
+- [Windows Configuration](https://mayakron.altervista.org/support/acrylic/Windows10Configuration.htm)
+
+ 
 # What the script does:
 
 Installs the required packages
